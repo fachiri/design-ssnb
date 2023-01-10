@@ -28,7 +28,7 @@
         <button class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 w-36 py-2.5 rounded-full font-bold text-white">Ayo Daftar!</button>
       </nav>
       <main>
-        <section class="hero h-[calc(100vh_-_5rem)] bg-[url('/bg1.png')] bg-no-repeat bg-bottom bg-contain">
+        <section class="hero h-[calc(100vh_-_5rem)] bg-[url('bg/bg1.png')] bg-no-repeat bg-bottom bg-contain">
           <div class="h-full container mx-auto flex flex-col items-center justify-between pt-7">
             <h1 class="text-4xl font-bold text-center mb-4">
               Membentuk Karakter 
@@ -38,26 +38,26 @@
             </h1>
             <h4 class="text-lg text-center mb-10">Elit sed do eiusmod tempor incididunt ut labore <br> et dolore magna aliqua.</h4>
             <div class="imgBx flex space-x-5 items-center">
-              <img src="img1.png" alt="img1" class="img1 -mt-28">
-              <img src="img2.png" alt="img2" class="img2">
-              <img src="img3.png" alt="img3" class="img3">
-              <img src="img4.png" alt="img4" class="img4 -mt-28">
+              <img src="img/img1.png" alt="img1" class="img1 -mt-28">
+              <img src="img/img2.png" alt="img2" class="img2">
+              <img src="img/img3.png" alt="img3" class="img3">
+              <img src="img/img4.png" alt="img4" class="img4 -mt-28">
             </div>
             <div class="flex">
-              <img src="brand1.svg" alt="brand1" class="w-36 aspect-[3/2] object-contain mix-blend-color-burn opacity-50">
-              <img src="brand4.svg" alt="brand4" class="w-36 aspect-[3/2] object-contain mix-blend-color-burn opacity-50">
-              <img src="brand3.svg" alt="brand3" class="w-36 aspect-[3/2] object-contain mix-blend-color-burn opacity-50">
-              <img src="brand2.svg" alt="brand2" class="w-36 aspect-[3/2] object-contain mix-blend-color-burn opacity-50">
+              <img src="brand/brand1.svg" alt="brand1" class="w-36 aspect-[3/2] object-contain mix-blend-color-burn opacity-50">
+              <img src="brand/brand4.svg" alt="brand4" class="w-36 aspect-[3/2] object-contain mix-blend-color-burn opacity-50">
+              <img src="brand/brand3.svg" alt="brand3" class="w-36 aspect-[3/2] object-contain mix-blend-color-burn opacity-50">
+              <img src="brand/brand2.svg" alt="brand2" class="w-36 aspect-[3/2] object-contain mix-blend-color-burn opacity-50">
             </div>
           </div>
         </section>
         <section class="gap bg-[#E65C5B] h-20"></section>
-        <section id="visimisi" class="h-screen bg-[url('/bg2.png')] bg-no-repeat bg-cover p-5 text-slate-200">
+        <section id="visimisi" class="h-screen bg-[url('bg/bg2.png')] bg-no-repeat bg-cover p-5 text-slate-200">
           <div class="h-full container mx-auto flex flex-col items-center justify-center">
             <h1 class="text-4xl font-bold mb-10 uppercase">Visi & Misi</h1>
             <div class="flex justify-center space-x-10">
               <div class="flex flex-col items-center justify-center text-center">
-                <img src="img5.png" alt="Foto Kepsek" class="mb-3">
+                <img src="img/img5.png" alt="Foto Kepsek" class="mb-3">
                 <h2 class="text-3xl font-bold">Jane Doe M.Pd</h2>
                 <h5 class="text-lg">Direktur Sekolah <br> Sukma Nusa Bangsa</h5>
               </div>
@@ -76,11 +76,11 @@
           </div>  
         </section>
         <section class="gap bg-[#E65C5B] h-20"></section>
-        <section id="kurikulum" class="h-screen bg-[url('/bg3.png')] bg-no-repeat bg-top bg-cover p-5 text-[#525252]">
+        <section id="kurikulum" class="h-screen bg-[url('bg/bg3.png')] bg-no-repeat bg-top bg-cover p-5 text-[#525252]">
           <div class="h-full container mx-auto flex flex-col items-center pt-32">
             <h1 class="text-4xl font-extrabold uppercase">Kurikulum</h1>
             <div class="flex items-center space-x-10 px-32">
-              <img src="img6.png" alt="Pendidikan Karakter" class="h-60">
+              <img src="img/img6.png" alt="Pendidikan Karakter" class="h-60">
               <div>
                 <h2 class="text-3xl font-bold mb-2">Pendidikan Karakter</h2>
                 <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -88,7 +88,7 @@
               </div>
             </div>
             <div class="flex flex-row-reverse items-center space-x-10 space-x-reverse px-32">
-              <img src="img7.png" alt="Pendidikan Karakter" class="h-60">
+              <img src="img/img7.png" alt="Pendidikan Karakter" class="h-60">
               <div class="text-right">
                 <h2 class="text-3xl font-bold mb-2">Pendidikan Karakter</h2>
                 <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -180,9 +180,9 @@
 
       $("#rightBtn").on("click", () => {
         if($(".teacher[position=right]").next().attr("position-end") == "true") {
-          $("#rightBtn").attr("disabled", "").addClass("bg-red-200 cursor-not-allowed")
+          $("#rightBtn").attr("disabled", "").addClass("bg-red-200 cursor-not-allowed").removeClass("hover:bg-red-300")
         } else {
-          $("#leftBtn").removeAttr("disabled").removeClass("bg-red-200 cursor-not-allowed")
+          $("#leftBtn").removeAttr("disabled").removeClass("bg-red-200 cursor-not-allowed").addClass("hover:bg-red-300")
         }
         $(".teacher[position=left]").addClass("hidden").removeAttr("position").next().attr("position", "left").removeClass("mx-10")
         $(".teacher[position=right]").attr("position", "center").addClass("mx-10").next().removeClass("hidden").attr("position", "right")
@@ -190,9 +190,9 @@
 
       $("#leftBtn").on("click", () => {
         if($(".teacher[position=left]").prev().attr("position-start") == "true") {
-          $("#leftBtn").attr("disabled", "").addClass("bg-red-200 cursor-not-allowed")
+          $("#leftBtn").attr("disabled", "").addClass("bg-red-200 cursor-not-allowed").removeClass("hover:bg-red-300")
         } else {
-          $("#rightBtn").removeAttr("disabled").removeClass("bg-red-200 cursor-not-allowed")
+          $("#rightBtn").removeAttr("disabled").removeClass("bg-red-200 cursor-not-allowed").addClass("hover:bg-red-300")
         }
         $(".teacher[position=left]").attr("position", "center").addClass("mx-10").prev().removeClass("hidden").attr("position", "left")
         $(".teacher[position=right]").addClass("hidden").removeAttr("position").prev().attr("position", "right").removeClass("mx-10")
