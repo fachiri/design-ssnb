@@ -1,0 +1,29 @@
+* {
+  font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
+}
+
+.imgBx .img1 {
+    animation: animate 4s linear infinite;
+}
+
+.imgBx .img2 {
+    animation: animate 4s .5s linear infinite;
+}
+
+.imgBx .img3 {
+    animation: animate 4s 1s linear infinite;
+}
+
+.imgBx .img4 {
+    animation: animate 4s 1.5s linear infinite;
+}
+
+@keyframes animate {
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px );
+    }
+}
