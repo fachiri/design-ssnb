@@ -19,6 +19,15 @@
     animation: animate 4s 1.5s linear infinite;
 }
 
+.three-line-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
 @keyframes animate {
     0%,100%{
         transform: translateY(0px);
