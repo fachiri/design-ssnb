@@ -28,6 +28,24 @@
     -webkit-box-orient: vertical;
 }
 
+.cards::-webkit-scrollbar {
+    height: 12px;
+}
+  
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6)
+}
+
+.cards::-webkit-scrollbar-track {
+    background: #E96F6E;
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+}
+
 @keyframes animate {
     0%,100%{
         transform: translateY(0px);

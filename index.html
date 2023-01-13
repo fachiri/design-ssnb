@@ -35,19 +35,19 @@
           <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <nav class="content container mx-auto flex justify-between items-center h-20 px-5 sm:px-10 lg:px-15 hidden">
+    <nav class="content container mx-auto flex justify-between items-center h-20 px-5 sm:px-10 lg:px-15 hidden relative">
       <div class="w-36">
         <img src="logo.webp" alt="logo" class="h-10"/>
       </div>
-      <ul class="flex space-x-5 justify-center hidden md:inline-flex">
-        <li class="font-semibold hover:text-red-500"><a href="#visimisi">Visi & Misi</a></li>
-        <li class="font-semibold hover:text-red-500"><a href="#curriculum">Kurikulum</a></li>
-        <li class="font-semibold hover:text-red-500"><a href="#teachers">Pengajar</a></li>
-        <li class="font-semibold hover:text-red-500"><a href="#articles">Artikel</a></li>
-        <li class="font-semibold hover:text-red-500"><a href="#contact">Kontak</a></li>
+      <ul id="navItems" class="flex flex-col divide-y md:divide-y-0 md:flex-row md:space-x-5 justify-center hidden md:inline-flex absolute top-0 left-0 bg-white w-full mt-20 md:mt-0 md:w-auto md:static border-y md:border-0 z-10 shadow md:shadow-none">
+        <li class="font-semibold hover:text-red-500 flex"><a class="w-full px-5 py-2.5 md:p-0" href="#visimisi">Visi & Misi</a></li>
+        <li class="font-semibold hover:text-red-500 flex"><a class="w-full px-5 py-2.5 md:p-0" href="#curriculum">Kurikulum</a></li>
+        <li class="font-semibold hover:text-red-500 flex"><a class="w-full px-5 py-2.5 md:p-0" href="#teachers">Pengajar</a></li>
+        <li class="font-semibold hover:text-red-500 flex"><a class="w-full px-5 py-2.5 md:p-0" href="#articles">Artikel</a></li>
+        <li class="font-semibold hover:text-red-500 flex"><a class="w-full px-5 py-2.5 md:p-0" href="#contact">Kontak</a></li>
       </ul>
       <button class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 w-36 py-2.5 rounded-full font-bold text-white hidden lg:block">Ayo Daftar!</button>
-      <button class="group border w-10 h-10 md:hidden text-white border-2 border-white bg-[#E96F6E] rounded-full hover:bg-[#E65C5B] focus:ring-1 focus:ring-[#E96F6E]"><i class="fa-solid fa-bars group-active:animate-spin"></i></button>
+      <button id="opsiBtn" class="group border w-10 h-10 md:hidden text-white border-2 border-white bg-[#E96F6E] rounded-full hover:bg-[#E65C5B] focus:ring-1 focus:ring-[#E96F6E]"><i class="fa-solid fa-bars group-active:animate-spin"></i></button>
     </nav>
     <main class="content hidden">
       <section class="hero h-[calc(100vh_-_5rem)] bg-[url('bg/bg1.png')] bg-no-repeat bg-right-bottom bg-auto md:bg-contain">
@@ -76,7 +76,7 @@
                 <img src="img/img4.png" alt="img4" class="img4 md:-mt-28">
               </div>
             </div>
-            <button class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 w-36 py-2.5 rounded-full font-bold text-white lg:hidden">Ayo Daftar!</button>
+            <button class="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 w-36 py-2.5 rounded-full font-bold text-white lg:hidden focus:outline outline-offset-2 focus:outline-[#E65C5B]">Ayo Daftar!</button>
           </div>
           <div class="flex pt-5">
             <div class="md:basis-1/4">
@@ -216,13 +216,13 @@
       <section class="gap h-20"></section>
       <section id="articles" class="container mx-auto flex flex-col items-center justify-center h-screen text-[#525252] space-y-5 px-5">
         <h1 class="text-4xl font-extrabold uppercase">Artikel</h1>
-        <div class="flex flex-col bg-[#E96F6E] p-7 space-y-5 rounded-[1rem]">
+        <div class="flex flex-col w-full bg-[#E96F6E] p-7 space-y-5 rounded-[1rem]">
           <div class="flex justify-between text-[#E96F6E]">
             <div>
-              <button class="w-7 h-7 bg-white rounded-full">
+              <button class="leftBtnArticle w-7 h-7 bg-white rounded-full">
                 <i class="fa-solid fa-angle-left"></i>
               </button>
-              <button class="w-7 h-7 bg-white rounded-full">
+              <button class="rightBtnArticle w-7 h-7 bg-white rounded-full">
                 <i class="fa-solid fa-angle-right"></i>
               </button>
             </div>
@@ -231,8 +231,8 @@
               <i class="fa-solid fa-arrow-right"></i>
             </button>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            <div class="flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+          <!-- <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+            <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white" position="left">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
                 <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
@@ -240,12 +240,12 @@
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
                 </div>
-                <h4 class="text-xl font-bold three-line-ellipsis">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Odit porro ipsam unde modi impedit obcaecati</h4>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 1 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Odit porro ipsam unde modi impedit obcaecati</h4>
                 <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit porro, ipsam unde modi impedit obcaecati, iusto rerum ex debitis magnam, voluptatem fuga saepe. Numquam suscipit illum eveniet optio, soluta excepturi.</p>
               </div>
             </div>
-            <div class="flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+            <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden sm:inline-flex">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
                 <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
@@ -253,12 +253,12 @@
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
                 </div>
-                <h4 class="text-xl font-bold three-line-ellipsis">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 2 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
                 <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
               </div>
             </div>
-            <div class="flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden sm:inline-flex">
+            <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:inline-flex">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
                 <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
@@ -266,12 +266,12 @@
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
                 </div>
-                <h4 class="text-xl font-bold three-line-ellipsis">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit ahwdiu awd ahwdui haowiudh a</h4>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 3 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit ahwdiu awd ahwdui haowiudh a</h4>
                 <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ut optio totam? Magni, perspiciatis? Ad tempore, recusandae adipisci quasi aliquid maxime voluptas in ea! Error, ratione asperiores! Dicta, asperiores pariatur?</p>
               </div>
             </div>
-            <div class="flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden sm:inline-flex">
+            <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:hidden lg:inline-flex">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
                 <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
@@ -279,12 +279,12 @@
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
                 </div>
-                <h4 class="text-xl font-bold three-line-ellipsis">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 4 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
                 <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
               </div>
             </div>
-            <div class="flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:inline-flex lg:hidden">
+            <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:inline-flex md:hidden">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
                 <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
@@ -292,12 +292,12 @@
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
                 </div>
-                <h4 class="text-xl font-bold three-line-ellipsis">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 5 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
                 <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
               </div>
             </div>
-            <div class="flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:inline-flex lg:hidden">
+            <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:inline-flex md:hidden">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
                 <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
@@ -305,12 +305,12 @@
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
                 </div>
-                <h4 class="text-xl font-bold three-line-ellipsis">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 6 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
                 <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
               </div>
             </div>
-            <div class="flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden">
+            <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
                 <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
@@ -318,12 +318,12 @@
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
                 </div>
-                <h4 class="text-xl font-bold three-line-ellipsis">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 7 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
                 <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
               </div>
             </div>
-            <div class="flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden">
+            <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
                 <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
@@ -331,22 +331,128 @@
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
                 </div>
-                <h4 class="text-xl font-bold three-line-ellipsis">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 8 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
                 <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
               </div>
             </div>
-          </div>
-          <div class="flex justify-center space-x-2">
-            <span class="w-7 h-1 bg-white rounded-full opacity-50"></span>
-            <span class="w-7 h-1 bg-white rounded-full"></span>
-            <span class="w-7 h-1 bg-white rounded-full"></span>
-            <span class="w-7 h-1 bg-white rounded-full"></span>
-            <span class="w-7 h-1 bg-white rounded-full"></span>
-            <span class="w-7 h-1 bg-white rounded-full opacity-50"></span>
-            <span class="w-7 h-1 bg-white rounded-full opacity-50"></span>
-            <span class="w-7 h-1 bg-white rounded-full opacity-50"></span>
-          </div>
+          </div> -->
+          <!-- <div class="flex justify-center space-x-2">
+            <button class="indicator"><div class="w-7 h-1 bg-white rounded-full opacity-50"></div></button>
+            <button class="indicator"><div class="w-7 h-1 bg-white rounded-full opacity-50"></div></button>
+            <button class="indicator"><div class="w-7 h-1 bg-white rounded-full opacity-50"></div></button>
+            <button class="indicator"><div class="w-7 h-1 bg-white rounded-full opacity-50"></div></button>
+            <button class="indicator"><div class="w-7 h-1 bg-white rounded-full opacity-50"></div></button>
+            <button class="indicator"><div class="w-7 h-1 bg-white rounded-full opacity-50"></div></button>
+            <button class="indicator"><div class="w-7 h-1 bg-white rounded-full opacity-50"></div></button>
+            <button class="indicator"><div class="w-7 h-1 bg-white rounded-full opacity-50"></div></button>
+          </div> -->
+          <ul class="cards flex overflow-x-scroll w-full space-x-5 snap-mandatory snap-x pb-5">
+            <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+              <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
+              <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
+                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <div class="tags text-[#EF9190]">
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
+                </div>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 1 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Odit porro ipsam unde modi impedit obcaecati</h4>
+                <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit porro, ipsam unde modi impedit obcaecati, iusto rerum ex debitis magnam, voluptatem fuga saepe. Numquam suscipit illum eveniet optio, soluta excepturi.</p>
+              </div>
+            </li>
+            <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+              <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
+              <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
+                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <div class="tags text-[#EF9190]">
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
+                </div>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 2 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore...</p>
+              </div>
+            </li>
+            <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+              <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
+              <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
+                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <div class="tags text-[#EF9190]">
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
+                </div>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 3 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit ahwdiu awd ahwdui haowiudh a</h4>
+                <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ut optio totam? Magni, perspiciatis? Ad tempore, recusandae adipisci quasi aliquid maxime voluptas in ea! Error, ratione asperiores! Dicta, asperiores pariatur?</p>
+              </div>
+            </li>
+            <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+              <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
+              <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
+                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <div class="tags text-[#EF9190]">
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
+                </div>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 4 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
+              </div>
+            </li>
+            <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+              <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
+              <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
+                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <div class="tags text-[#EF9190]">
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
+                </div>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 5 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
+              </div>
+            </li>
+            <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+              <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
+              <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
+                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <div class="tags text-[#EF9190]">
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
+                </div>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 6 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
+              </div>
+            </li>
+            <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+              <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
+              <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
+                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <div class="tags text-[#EF9190]">
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
+                </div>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 7 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
+              </div>
+            </li>
+            <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
+              <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
+              <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
+                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <div class="tags text-[#EF9190]">
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
+                  <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
+                </div>
+                <h4 class="text-xl font-bold three-line-ellipsis">Lorem 8 Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit.</h4>
+                <span><i class="fa-solid fa-calendar-days"></i> 18 September 2022</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt laborum pariatur consequatur sapiente fugit nihil, minima harum eligendi itaque, esse possimus nemo sunt libero eius reprehenderit! Labore non eaque deleniti?</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="gap h-20"></section>
@@ -409,7 +515,7 @@
               <a href="#" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-newspaper w-6"></i> Artikel</a>
             </div>
           </div>
-          <div class="basis-1/4 lg:basis-1/4">
+          <div class="basis-1/4 lg:basis-1[100%]"
             <h4 class="text-xl mb-2 font-bold">Hubungi TK</h4>
             <div class="flex flex-col space-y-1">
               <a href="#" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-phone w-6"></i> 0822-2822-2822</a>
@@ -417,7 +523,7 @@
               <a href="#" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-location-dot w-6"></i> Jln. T. Mangkona No. 21 RT. 018 RW. 005 Kel. Buol</a>
             </div>
           </div>
-          <div class="basis-1/4 lg:basis-1/4">
+          <div class="basis-1/4 lg:basis-1[100%]"
             <h4 class="text-xl mb-2 font-bold">Hubungi SD</h4>
             <div class="flex flex-col space-y-1">
               <a href="#" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-phone w-6"></i> 0822-2822-2822</a>
@@ -444,6 +550,14 @@
   </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script>
+      const sm = 640
+      const md = 768
+      const lg = 1024
+      const xl = 1280
+      const xxl = 1536
+      const gap = 17
+      const curentWidth = $(window).width()
+
       $(window).on("load", () => {
         $(".content").removeClass("hidden")
         $('#overlay').fadeOut();
@@ -484,5 +598,68 @@
         $(".teacher[position=left]").attr("position", "center").prev().removeClass("hidden").attr("position", "left")
         $(".teacher[position=right]").addClass("hidden").removeAttr("position").prev().attr("position", "right")
       })
+
+      // let displayItem
+      // const indicator = $(".indicator div")
+      // const article = $(".article")
+      // if (curentWidth >= lg) {
+      //   displayItem = 4
+      // } else if (curentWidth >= md) {
+      //   displayItem = 3
+      // } else if (curentWidth >= sm) {
+      //   displayItem = 2
+      // } else {
+      //   displayItem = 1
+      // }
+      // article.eq(displayItem-1).attr("position", "right")
+      // for (let i = 0; i < displayItem; i++) {
+      //   indicator.eq(i).removeClass("opacity-50")
+      // }
+
+      // $(window).on("resize", () => {
+      //   const width = $(window).width() + gap
+      //   const indicator = $(".indicator div")
+      //   indicator.addClass("opacity-50")
+      //   if (width >= lg) {
+      //     displayItem = 4
+      //   } else if (width >= md) {
+      //     displayItem = 3
+      //   } else if (width >= sm) {
+      //     displayItem = 2
+      //   } else {
+      //     displayItem = 1
+      //   }
+      //   for (let i = 0; i < displayItem; i++) {
+      //     indicator.eq(i).removeClass("opacity-50")
+      //   }
+      // })
+
+      // $(".rightBtnArticle").on("click", () => {
+      //   const articleLeft = $(".article[position=left]")
+      //   const articleRight = $(".article[position=right]")
+      //   articleLeft.addClass("hidden").removeAttr("position").next().attr("position", "left")
+      //   articleRight.next().addClass("inline-flex").attr("position", "right")
+      // })
+
+      $(".rightBtnArticle").on("click", () => {
+        const leftPos = $('.cards').scrollLeft();
+        $(".cards").animate({scrollLeft: leftPos + 200}, 0);
+      })
+
+      $(".leftBtnArticle").on("click", () => {
+        const rightPos = $('.cards').scrollLeft();
+        $(".cards").animate({scrollLeft: rightPos - 200}, 0);
+      })
+
+      $("#opsiBtn").on("click", () => {
+        $("#navItems").toggleClass("hidden")
+      })
+
+      $(document).mouseup((e) => {
+        if (!$("#navItems").is(e.target) && $("#navItems").has(e.target).length === 0) {
+          $("#navItems").addClass("hidden");
+        }
+      });
+
     </script>
 </html>
