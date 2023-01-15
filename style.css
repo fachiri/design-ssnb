@@ -53,3 +53,10 @@
         transform: translateY(-10px );
     }
 }
+
+.angle-left-solid::after {
+    content: url('icons/angle-left-solid.svg');
+    display: block;
+    height: 1em;
+    width: 1em;
+}
