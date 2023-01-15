@@ -1,4 +1,4 @@
-## SEO Optimization
+## SEO Issues
 
 Explore Google Search documentation to improve site's SEO ([Docs](https://developers.google.com/search/docs))
 
