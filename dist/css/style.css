@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+.imgBx .img1 {
+    animation: animate 4s linear infinite;
+}
+
+.imgBx .img2 {
+    animation: animate 4s .5s linear infinite;
+}
+
+.imgBx .img3 {
+    animation: animate 4s 1s linear infinite;
+}
+
+.imgBx .img4 {
+    animation: animate 4s 1.5s linear infinite;
+}
+
+.three-line-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+.cards::-webkit-scrollbar {
+    height: 12px;
+}
+  
+.cards::-webkit-scrollbar-thumb,
+.cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+}
+
+.cards::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6)
+}
+
+.cards::-webkit-scrollbar-track {
+    background: #E96F6E;
+    outline: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+@keyframes animate {
+    0%,100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px );
+    }
+}
+
+.angle-left-solid::after {
+    content: url('icons/angle-left-solid.svg');
+    display: block;
+    height: 1em;
+    width: 1em;
+}
