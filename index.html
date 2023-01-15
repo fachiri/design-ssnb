@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Sukma Nusa Bangsa | Sekolah Pendidikan Karakter di Gorontalo">
-    <meta name="description" content="Mewujudkan pendidikan yang dapat mengembangkan karakter unggul anak bangsa, baik cerdas secara spiritual, intelektual, emosional dan sosial.">
+    <meta name="description" content="Sekolah Sukma Nusa Bangsa bertujuan untuk mewujudkan pendidikan yang dapat mengembangkan karakter unggul anak bangsa, baik cerdas secara spiritual, intelektual, emosional dan sosial.">
     <meta name="keywords" content="SSNB, SNB, Sekolah, Gorontalo, Sukma, Nusa, Bangsa">
     <meta name="author" content="SSNB">
     <meta property="og:type" content="website">
@@ -20,22 +20,8 @@
     <meta property="twitter:image" content="https://ssnb.sch.id/meta-img.webp">
     <title>Sukma Nusa Bangsa | Sekolah Pendidikan Karakter di Gorontalo</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d',
-            }
-          }
-        }
-      }
-    </script> -->
+    <link rel="stylesheet" href="dist/css/font.css">
+    <script src="https://kit.fontawesome.com/885a15d946.js" crossorigin="anonymous"></script>
     <link href="output.css" rel="stylesheet">
     <link rel="stylesheet" href="vex.css" />
     <link rel="stylesheet" href="vex-theme-wireframe.css" />
@@ -63,8 +49,8 @@
         <li class="font-semibold hover:text-red-500 flex"><a class="w-full px-5 py-2.5 md:p-0" href="#articles">Artikel</a></li>
         <li class="font-semibold hover:text-red-500 flex"><a class="w-full px-5 py-2.5 md:p-0" href="#contact">Kontak</a></li>
       </ul>
-      <button class="joinBtn bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 w-36 py-2.5 rounded-full font-bold text-white hidden lg:block">Ayo Daftar <i class="fa-solid fa-feather-pointed"></i></button>
-      <button id="opsiBtn" class="group border w-10 h-10 md:hidden text-white border-2 border-white bg-[#E96F6E] rounded-full hover:bg-[#E65C5B] focus:ring-1 focus:ring-[#E96F6E]"><i class="fa-solid fa-bars group-active:animate-spin"></i></button>
+      <button aria-label="join now" class="joinBtn bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 w-36 py-2.5 rounded-full font-bold text-white hidden lg:block">Ayo Daftar <i class="fa-solid fa-feather-pointed"></i></button>
+      <button id="opsiBtn" aria-label="navbar" class="group border w-10 h-10 md:hidden text-white border-2 border-white bg-[#E96F6E] rounded-full hover:bg-[#E65C5B] focus:ring-1 focus:ring-[#E96F6E]"><i class="fa-solid fa-bars group-active:animate-spin"></i></button>
     </nav>
     <main class="content hidden">
       <section class="hero h-[calc(100vh_-_5rem)] bg-[url('bg/bg1.webp')] bg-no-repeat bg-right-bottom bg-auto md:bg-contain">
@@ -77,7 +63,7 @@
                 <br class="hidden md:block"/>
                 Anak Bangsa
               </h1>
-              <h4 class="text-lg text-center">Cerdas Spiritual (SIQ), Intelektual (IQ), <br> Emosional (EQ) dan Sosial (SQ).</h4>
+              <h2 class="text-lg text-center">Cerdas Spiritual (SIQ), Intelektual (IQ), <br class="hidden md:block"/> Emosional (EQ) dan Sosial (SQ).</h2>
             </div>
             <div class="imgBx flex space-x-5 items-center">
               <div class="basis-1/4">
@@ -93,7 +79,7 @@
                 <img src="img/img4.webp" alt="School Activities 4" class="img4 md:-mt-28">
               </div>
             </div>
-            <button class="joinBtn bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 py-2.5 px-4 rounded-full font-bold text-white lg:hidden focus:outline outline-offset-2 focus:outline-[#E65C5B]">Daftar Sekarang <i class="fa-solid fa-feather-pointed"></i></button>
+            <button aria-label="join now" class="joinBtn bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 py-2.5 px-4 rounded-full font-bold text-white lg:hidden focus:outline outline-offset-2 focus:outline-[#E65C5B]">Daftar Sekarang <i class="fa-solid fa-feather-pointed"></i></button>
           </div>
           <div class="flex pt-5">
             <div class="md:basis-1/4">
@@ -139,7 +125,7 @@
             <div class="md:text-left">
               <h2 class="text-3xl font-bold mb-2">Pendidikan Karakter</h2>
               <p class="mb-2">Menanamkan nilai-nilai karakter tertentu kepada anak yang di dalamnya terdapat komponen pengetahuan, kesadaran atau kemauan, serta tindakan untuk melakukan nilai-nilai tersebut.</p>
-              <a href="javascript:void(0)" class="text-red-500 font-bold hover:text-red-700">Selengkapnnya <i class="fa-solid fa-arrow-right"></i></a>
+              <span class="text-red-500 font-bold hover:text-red-700">Selengkapnnya <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
           <div class="flex flex-col md:flex-row-reverse items-center md:space-x-10 md:space-x-reverse lg:px-32">
@@ -147,7 +133,7 @@
             <div class="md:text-right">
               <h2 class="text-3xl font-bold mb-2">Pendidikan Akademik</h2>
               <p class="mb-2">Meningkatkan penguasaan dan pengembangan displin ilmu pengetahuan, teknologi, dan seni sesuai dengan minat anak.</p>
-              <a href="javascript:void(0)" class="text-red-500 font-bold hover:text-red-700">Selengkapnnya <i class="fa-solid fa-arrow-right"></i></a>
+              <span class="text-red-500 font-bold hover:text-red-700">Selengkapnnya <i class="fa-solid fa-arrow-right"></i></span>
             </div>
           </div>
         </div>
@@ -157,29 +143,29 @@
         <div class="container mx-auto h-full flex flex-col items-center justify-center space-y-5 md:space-y-10 px-5 sm:px-10 lg:px-15">
           <h2 class="text-4xl font-extrabold uppercase">Pengajar</h2>
           <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-10">
-            <div class="flex items-center space-x-4 bg-[#FEA6A5] text-white p-3 rounded-[1rem]">
+            <div class="flex items-center space-x-4 bg-gradient-to-br from-[#E65D5C] to-[#FE9896] text-white p-3 rounded-[1rem]">
               <span class="group text-3xl bg-[#FEC6C8] p-3 rounded-[0.7rem]">
                 <i class="fa-solid fa-chalkboard-user text-[#E36D73] group-hover:hidden"></i>
                 <i class="fa-solid fa-person-chalkboard text-[#E36D73] hidden group-hover:inline-flex"></i>
               </span>
               <span>
-                <h3 class="text-2xl font-bold">04</h3>
-                <h5 class="text-xl font-bold">Guru TK</h5>
+                <span class="text-2xl font-bold">04</span>
+                <h3 class="text-xl font-bold">Guru TK</h3>
               </span>
             </div>
-            <div class="flex items-center space-x-4 bg-[#FEA6A5] text-white p-3 rounded-[1rem]">
+            <div class="flex items-center space-x-4 bg-gradient-to-br from-[#E65D5C] to-[#FE9896] text-white p-3 rounded-[1rem]">
               <span class="group text-3xl bg-[#FEC6C8] p-3 rounded-[0.7rem]">
                 <i class="fa-solid fa-chalkboard-user text-[#E36D73] group-hover:hidden"></i>
                 <i class="fa-solid fa-person-chalkboard text-[#E36D73] hidden group-hover:inline-flex"></i>
               </span>
               <span>
-                <h3 class="text-2xl font-bold">04</h3>
-                <h5 class="text-xl font-bold">Guru SD</h5>
+                <span class="text-2xl font-bold">04</span>
+                <h3 class="text-xl font-bold">Guru SD</h3>
               </span>
             </div>
           </div>
           <div class="flex flex-col md:flex-row items-center w-full md:w-auto pt-16 text-center">
-            <button class="leftBtn bg-[#FFA09E] hover:bg-red-300 rounded-full p-3 text-white mr-2.5 md:mr-5 hidden md:block">
+            <button aria-label="scroll left" class="leftBtn bg-[#FFA09E] hover:bg-red-300 rounded-full p-3 text-white mr-2.5 md:mr-5 hidden md:block">
               <i class="fa-solid fa-angle-left"></i>
             </button>
             <div class="flex w-full md:w-auto">
@@ -250,19 +236,19 @@
               </div>
               <div class="teacher border-4 border-dashed border-[#FFA09E] basis-2/6	 md:w-44 md:h-44 overflow-hidden relative rounded-[1rem] mx-2.5 md:mx-5 hidden" position-end="true"></div>
             </div>
-            <button class="rightBtn bg-[#FFA09E] hover:bg-red-300 rounded-full p-3 text-white ml-2.5 md:ml-5 hidden md:block">
+            <button aria-label="scroll right" class="rightBtn bg-[#FFA09E] hover:bg-red-300 rounded-full p-3 text-white ml-2.5 md:ml-5 hidden md:block">
               <i class="fa-solid fa-angle-right"></i>
             </button>
             <div class="block md:hidden mt-5">
-              <button class="leftBtn bg-[#FFA09E] hover:bg-red-300 rounded-full w-10 h-10 text-white">
+              <button aria-label="scroll left" class="leftBtn bg-[#FFA09E] hover:bg-red-300 rounded-full w-10 h-10 text-white">
                 <i class="fa-solid fa-angle-left"></i>
               </button>
-              <button class="rightBtn bg-[#FFA09E] hover:bg-red-300 rounded-full w-10 h-10 text-white">
+              <button aria-label="scroll right" class="rightBtn bg-[#FFA09E] hover:bg-red-300 rounded-full w-10 h-10 text-white">
                 <i class="fa-solid fa-angle-right"></i>
               </button>
             </div>
           </div>
-          <button class="border-2 border-[#FFA09E] py-2 px-3 rounded-full text-[#FFA09E] font-bold hover:bg-[#FFA09E] hover:text-white">Lebih Banyak</button>
+          <button aria-label="see more" class="border-2 border-[#FFA09E] py-2 px-3 rounded-full text-[#FFA09E] font-bold hover:bg-[#FFA09E] hover:text-white">Lebih Banyak</button>
         </div>
       </section>
       <section class="gap h-20"></section>
@@ -271,14 +257,14 @@
         <div class="flex flex-col w-full bg-[#E96F6E] p-7 space-y-5 rounded-[1rem]">
           <div class="flex justify-between text-[#E96F6E]">
             <div>
-              <button class="leftBtnArticle w-7 h-7 bg-white rounded-full">
+              <button aria-label="scroll left" class="leftBtnArticle w-7 h-7 bg-white rounded-full">
                 <i class="fa-solid fa-angle-left"></i>
               </button>
-              <button class="rightBtnArticle w-7 h-7 bg-white rounded-full">
+              <button aria-label="scroll right" class="rightBtnArticle w-7 h-7 bg-white rounded-full">
                 <i class="fa-solid fa-angle-right"></i>
               </button>
             </div>
-            <button class="rounded-full bg-white px-4 font-bold">
+            <button aria-label="see more" class="rounded-full bg-white px-4 font-bold">
               Lebih Banyak
               <i class="fa-solid fa-arrow-right"></i>
             </button>
@@ -287,7 +273,7 @@
             <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white" position="left">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -300,7 +286,7 @@
             <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden sm:inline-flex">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -313,7 +299,7 @@
             <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:inline-flex">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -326,7 +312,7 @@
             <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:hidden lg:inline-flex">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -339,7 +325,7 @@
             <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:inline-flex md:hidden">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -352,7 +338,7 @@
             <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden md:inline-flex md:hidden">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -365,7 +351,7 @@
             <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -378,7 +364,7 @@
             <div class="article flex flex-col card basis-1/4 bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white hidden">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -403,7 +389,7 @@
             <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
               <img src="artikel/field-trip-kantor-basarnas.webp" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Field Trip</span>
                 </div>
@@ -415,7 +401,7 @@
             <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
               <img src="artikel/lomba-meng-kolase-dari-limbah.webp" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lomba</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Hari Ibu</span>
@@ -441,7 +427,7 @@
             <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
               <img src="artikel/mengunjungi-makam-pahlawan.webp" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Hari Pahlawan</span>
                 </div>
@@ -455,7 +441,7 @@
             <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
               <img src="artikel/field-trip-tempat-ibadah-vihara.webp" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Field Trip</span>
                 </div>
@@ -467,7 +453,7 @@
             <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
               <img src="artikel/field-trip-asrama-haji.webp" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Field Trip</span>
                 </div>
@@ -479,7 +465,7 @@
             <!-- <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -492,7 +478,7 @@
             <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -505,7 +491,7 @@
             <li class="article snap-start flex flex-col flex-[0_0_100%] sm:basis-[calc(calc(100%_/_2)_-_10px)] md:basis-[calc(calc(100%_/_3)_-_13px)] lg:basis-[calc(calc(100%_/_4)_-_15px)] bg-white h-80 rounded-[1rem] overflow-hidden border-4 border-b-8 border-white">
               <img src="artikel/artikel1.png" alt="Artikel" class="h-[9.4rem] object-cover">
               <div class="flex flex-col grow space-y-1 p-3 rounded-[1rem] bg-white -mt-4">
-                <button class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
+                <button aria-label="vertical slide" class="flex justify-center mb-2 cursor-n-resize"><div class="w-12 border-2 border-red-200 rounded-full"></div></button>
                 <div class="tags text-[#EF9190]">
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Lorem</span>
                   <span class="border border-[#EF9190] rounded-lg px-2 text-sm">Ipsum Sit</span>
@@ -554,7 +540,7 @@
                     <label for="message" class="font-bold mb-2 block">Pesan</label>
                     <textarea name="message" id="message" class="resize-none w-full h-36 rounded-md border-2 border-[#BCBCBC] shadow-sm focus:outline-none focus:border-[#FFA09E] p-3"></textarea>
                   </div>
-                  <button type="submit" class="bg-white border-2 border-[#FFA09E] py-2 px-5 rounded-full text-[#FFA09E] font-bold hover:bg-[#FFA09E] hover:text-white focus:outline-none focus:bg-[#FFA09E] focus:text-white">Kirim Pesan <i class="fa-regular fa-paper-plane"></i></button>
+                  <button aria-label="send" type="button" class="bg-white border-2 border-[#FFA09E] py-2 px-5 rounded-full text-[#FFA09E] font-bold hover:bg-[#FFA09E] hover:text-white focus:outline-none focus:bg-[#FFA09E] focus:text-white">Kirim Pesan <i class="fa-regular fa-paper-plane"></i></button>
                 </form>
               </div>
             </div>
@@ -582,7 +568,7 @@
             <h4 class="text-xl mb-2 font-bold">Hubungi TK</h4>
             <div class="flex flex-col space-y-1">
               <a href="tel://6282259864412" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-phone w-6"></i> 0822-5986-4412 (Indah)</a>
-              <a href="javascript:void(0)" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-envelope w-6"></i> admin@ssnb</a>
+              <span class="hover:text-[#f9e4a4]"><i class="fa-solid fa-envelope w-6"></i> admin@ssnb</span>
               <a href="https://goo.gl/maps/SeQcymDbAJX2234e7" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-location-dot w-6"></i> Jln. Pangeran Hidayat 1 Kota Gorontalo</a>
             </div>
           </div>
@@ -590,19 +576,19 @@
             <h4 class="text-xl mb-2 font-bold">Hubungi SD</h4>
             <div class="flex flex-col space-y-1">
               <a href="tel://6282259864412" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-phone w-6"></i> 0822-5986-4412 (Indah)</a>
-              <a href="javascript:void(0)" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-envelope w-6"></i> admin@ssnb</a>
+              <span class="hover:text-[#f9e4a4]"><i class="fa-solid fa-envelope w-6"></i> admin@ssnb</span>
               <a href="https://goo.gl/maps/bmYDdhSf8VQijn2Y6" class="hover:text-[#f9e4a4]"><i class="fa-solid fa-location-dot w-6"></i> Jln. Arif Rahman Hakim Kota Gorontalo</a>
             </div>
           </div>
         </div>
         <div class="flex flex-col sm:flex-row justify-between items-center border-t-2 border-red-300 mt-3 pt-3">
           <div class="space-x-1 text-xl mb-2 sm:mb-0">
-            <a href="https://www.instagram.com/tksukma_nusa_bangsa" class="hover:text-[#f9e4a4]"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.instagram.com/sd_sukmanusabangsa" class="hover:text-[#f9e4a4]"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://web.facebook.com/sukma.n.bangsa" class="hover:text-[#f9e4a4]"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.youtube.com/@yayasansukmanusabangsa5399" class="hover:text-[#f9e4a4]"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.instagram.com/tksukma_nusa_bangsa" class="hover:text-[#f9e4a4]" aria-label="See more about Instagram TK Sukma Nusa Bangsa"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.instagram.com/sd_sukmanusabangsa" class="hover:text-[#f9e4a4]" aria-label="See more about Instagram SD Sukma Nusa Bangsa"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://web.facebook.com/sukma.n.bangsa" class="hover:text-[#f9e4a4]" aria-label="See more about Facebook Sekolah Sukma Nusa Bangsa"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@yayasansukmanusabangsa5399" class="hover:text-[#f9e4a4]" aria-label="See more about Youtube Sekolah Sukma Nusa Bangsa"><i class="fa-brands fa-youtube"></i></a>
           </div>
-          <span>Copyright 2023 <a href="javascript:void(0)" class="font-bold hover:text-[#f9e4a4]">SSNB</a>. All Rights Reserved</span>
+          <span>Copyright 2023 <span class="font-bold hover:text-[#f9e4a4]">SSNB</span>. All Rights Reserved</span>
         </div>
       </div>
     </footer>
