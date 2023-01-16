@@ -2,7 +2,6 @@
 <html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="title" content="Sukma Nusa Bangsa | Sekolah Pendidikan Karakter di Gorontalo">
     <meta name="description" content="Sekolah Sukma Nusa Bangsa bertujuan untuk mewujudkan pendidikan yang dapat mengembangkan karakter unggul anak bangsa, baik cerdas secara spiritual, intelektual, emosional dan sosial.">
@@ -28,7 +27,7 @@
   </head>
   <body class="bg-[F8F8F8]">
     <!-- spinner -->
-    <div id="overlay" class="absolute w-full h-full bg-white z-50 flex justify-center items-center">
+    <div id="overlay" class="fixed w-full h-full bg-white z-50 flex justify-center items-center">
       <div role="status">
         <svg aria-hidden="true" class="inline w-16 h-16 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-red-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
@@ -37,7 +36,7 @@
           <span class="sr-only">Loading...</span>
       </div>
     </div>
-    <nav class="content container mx-auto flex justify-between items-center h-20 px-5 sm:px-10 lg:px-15 hidden relative">
+    <nav class="content container mx-auto flex justify-between items-center h-20 px-5 sm:px-10 lg:px-15 relative">
       <div class="w-36">
         <img src="logo.webp" alt="Logo Sekolah Sukma Nusa Bangsa" class="max-w-max h-10"/>
       </div>
@@ -51,7 +50,7 @@
       <button aria-label="join now" class="joinBtn bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-500 w-36 py-2.5 rounded-full font-bold text-white hidden lg:block">Ayo Daftar <i class="fa-solid fa-feather-pointed"></i></button>
       <button id="opsiBtn" aria-label="navbar" class="group border w-10 h-10 md:hidden text-white border-2 border-white bg-[#E96F6E] rounded-full hover:bg-[#E65C5B] focus:ring-1 focus:ring-[#E96F6E]"><i class="fa-solid fa-bars group-active:animate-spin"></i></button>
     </nav>
-    <main class="content hidden">
+    <main class="content">
       <section class="hero h-[calc(100vh_-_5rem)] bg-[url('bg/bg1.webp')] bg-no-repeat bg-right-bottom bg-auto md:bg-contain">
         <div class="h-full container mx-auto flex flex-col items-center justify-between px-5 sm:px-10 lg:px-0">
           <div class="grow flex flex-col items-center justify-center space-y-10">
@@ -604,7 +603,7 @@
       <i class="fa-solid fa-arrow-up"></i>
     </button>
     <script src="https://kit.fontawesome.com/885a15d946.js" crossorigin="anonymous"></script>
-    <script src="dist/js/vex.combined.min.js"></script>
+    <script src="dist/js/vex.combined.min.js" defer></script>
     <script src="dist/js/jquery.min.js"></script>
     <script>
       const sm = 640
@@ -616,7 +615,7 @@
       const curentWidth = $(window).width()
 
       $(window).on("load", () => {
-        $(".content").removeClass("hidden")
+        // $(".content").removeClass("hidden")
         $('#overlay').fadeOut();
       });
       
