@@ -928,6 +928,11 @@ video {
   width: 1.5rem;
 }
 
+.max-w-max {
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
 .flex-\[0_0_100\%\] {
   flex: 0 0 100%;
 }
@@ -1983,11 +1988,6 @@ video {
   background-color: rgb(230 92 91 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#FEA6A5\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 166 165 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#FEC6C8\] {
   --tw-bg-opacity: 1;
   background-color: rgb(254 198 200 / var(--tw-bg-opacity));
@@ -2021,8 +2021,8 @@ video {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 
-.bg-\[url\(\'bg\/bg1\.webp\'\)\] {
-  background-image: url('bg/bg1.webp');
+.bg-\[url\(\'bg\/bg1-mobile\.webp\'\)\] {
+  background-image: url('bg/bg1-mobile.webp');
 }
 
 .bg-\[url\(\'bg\/bg2\.webp\'\)\] {
@@ -2354,11 +2354,6 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-base {
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 .text-sm {
@@ -3191,6 +3186,10 @@ video {
 
   .md\:border-0 {
     border-width: 0px;
+  }
+
+  .md\:bg-\[url\(\'bg\/bg1\.webp\'\)\] {
+    background-image: url('bg/bg1.webp');
   }
 
   .md\:bg-contain {
